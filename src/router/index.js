@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Login from '../views/Login.vue';
-import Home from '../views/HomeView.vue';
+import Login from './components/Login.vue';
+import Dashboard from './components/Dashboard.vue';
 
 Vue.use(VueRouter);
 
@@ -15,8 +15,8 @@ const routes = [
     component: Login
   },
   {
-    path: '/home',
-    component: Home
+    path: '/dashboard',
+    component: Dashboard
   }
 ];
 
@@ -24,4 +24,6 @@ const router = new VueRouter({
   routes
 });
 
-export default router;
+new Vue({
+  router
+}).$mount('#app');
